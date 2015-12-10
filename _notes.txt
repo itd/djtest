@@ -1,0 +1,28 @@
+
+Set up database
+--------------------
+
+pip install psycopg2
+
+Type ``pqsl`` at the prompt, then:
+
+for the application: ::
+  CREATE ROLE mysiteuser with PASSWORD 'mysitepass';
+  CREATE DATABASE mysite WITH OWNER=mysiteuser  ENCODING 'UTf8';
+  grant all privileges on DATABASE mysite to mysiteuser;
+  ALTER ROLE mysiteuser LOGIN;
+
+Migrate the databases and project
+=================================
+Do this::
+
+  python manage.py makemigrations
+  python manage.py migrate
+
+After creating the database structure, we can create
+an administrative account by typing:
+
+  python manage.py createsuperuser
+
+admin - e2_A
+

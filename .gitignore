@@ -1,3 +1,4 @@
+.idea
 *.pyc
 *.pyo
 *.tmp*
@@ -7,6 +8,7 @@
 *.egg-info
 *.EGG-INFO
 .*.cfg
+*_pycache__
 bin/
 build/
 develop-eggs/
